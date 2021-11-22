@@ -18,6 +18,7 @@ ext {
 }
 
 dependencies {
+    implementation project(":test-data-management")
     implementation "com.microsoft.playwright:playwright:$playwriteVersion"
     testImplementation "org.junit.jupiter:junit-jupiter-api:$jUnitVersion"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jUnitVersion"
