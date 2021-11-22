@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.miamato'
+version '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    playwriteVersion = '1.17'
+    jUnitVersion = '5.8.1'
+}
+
+dependencies {
+    implementation "com.microsoft.playwright:playwright:$playwriteVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$jUnitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$playwriteVersion"
+}
+
+test {
+    useJUnitPlatform()
+}

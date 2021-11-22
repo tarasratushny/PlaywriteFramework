@@ -1,0 +1,5 @@
+rootProject.name = 'PlaywriteFramework'
+include 'framework-core'
+include 'test-data-management'
+include 'acceptance-tests'
+
