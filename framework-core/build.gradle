@@ -9,17 +9,20 @@ sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
+
 }
 
 ext {
-    playwriteVersion = '1.17'
+    playwriteVersion = '1.17.0'
     jUnitVersion = '5.8.1'
 }
 
 dependencies {
     implementation "com.microsoft.playwright:playwright:$playwriteVersion"
     testImplementation "org.junit.jupiter:junit-jupiter-api:$jUnitVersion"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$playwriteVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jUnitVersion"
+
+
 }
 
 test {
