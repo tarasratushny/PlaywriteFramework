@@ -2,23 +2,26 @@ plugins {
     id 'java'
 }
 
+compileJava{
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
 group 'org.miamato'
 version '1.0'
-
-sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
 
 }
 
-ext {
-    playwriteVersion = '1.17.0'
-    jUnitVersion = '5.8.1'
-}
+def log4jVersion = '2.14.1'
+def playwriteVersion = '1.17.0'
+def jUnitVersion = '5.8.1'
+
 
 dependencies {
     implementation project(":test-data-management")
+    implementation "org.apache.logging.log4j:log4j-core:$log4jVersion"
     implementation "com.microsoft.playwright:playwright:$playwriteVersion"
     testImplementation "org.junit.jupiter:junit-jupiter-api:$jUnitVersion"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jUnitVersion"
